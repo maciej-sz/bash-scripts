@@ -166,4 +166,5 @@ echo "After system is installed: 'VBoxManage modifyvm \"$NAME\" --boot1 disk'"
 echo "To run your VM in foreground: 'VBoxHeadless -s \"$NAME\"'"
 echo "To run your VM in background: 'VBoxManage startvm \"$NAME\" --type headless"
 echo "You might need a VNC client: apt-get install ssvnc; ssvncviewer host:port"
-
+echo "To set up ssh port forwarding: 'VBoxManage modifyvm \"$NAME\" --natpf1 \"guestssh,tcp,,9601,,22\""
+echo "To set up HTTP port forwarding: 'VBoxManage modifyvm \"$NAME\" --natpf1 \"guesthttp,tcp,,9702,,80\""
