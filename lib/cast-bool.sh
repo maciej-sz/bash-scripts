@@ -14,5 +14,3 @@ function castBool() {
         *) echo "Unrecognized boolean value: ${1}" 1>&2; exit 1;;
     esac
 }
-
-castBool 1
