@@ -11,16 +11,13 @@ do
     case ${arg_name} in
         --foo)
             echo "Foo = \"$arg_val\""
-            continue
-            ;;
+            continue;;
         --bar)
             echo "Bar = \"$arg_val\""
-            continue
-            ;;
+            continue;;
         --baz)
             echo "Baz is present"
-            continue
-            ;;
+            continue;;
         *)
             echo "ERROR: Unrecognized parameter: $arg_name" 1>&2
             exit 1
