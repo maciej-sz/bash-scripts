@@ -5,7 +5,7 @@ function configFileUpdate() {
     VAL=$2
     FILE=$3
 
-    CONTAINS=$(grep -o "^ *${VAR}\=" "${FILE}")
+    CONTAINS=$(echo $(grep -o "^ *${VAR}\=" "${FILE}"))
     if [[ "" == "${CONTAINS}" ]]; then
         echo -e "\n${VAR}=\"${VAL}\"" >> "${FILE}"
     else
