@@ -140,6 +140,7 @@ VBoxManage modifyvm "$NAME" --acpi on --hpet on --ioapic on
 echo "Configuring RDP access..."
 VBoxManage modifyvm "$NAME" --vrde on
 VBoxManage modifyvm "$NAME" --vrdeproperty VNCPassword="$RDP_PASSWD"
+VBoxManage modifyvm "$NAME" --vrdeport 9600
 VBoxManage modifyvm "$NAME" --vrdeauthlibrary null
 #VBoxManage modifyvm "$NAME" --vrdeauthtype external
 RDP_PASSWD_HASH=$(VBoxManage internalcommands passwordhash "$RDP_PASSWD" | cut -d " " -f 3)
